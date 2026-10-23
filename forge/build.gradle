@@ -51,9 +51,22 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
     modRuntimeOnly("maven.modrinth:architectury-api:1MKTLiiG")
     modRuntimeOnly("maven.modrinth:yacl:3.6.6+1.20.1-forge")
-    modRuntimeOnly("maven.modrinth:fusion-connected-textures:1.1.1-forge-mc1.20.1")
-    modRuntimeOnly("maven.modrinth:armor-of-the-ages:1.3.8-forge")
-    modRuntimeOnly("maven.modrinth:dawn-of-time:1.5.44-forge")
+    modRuntimeOnly("maven.modrinth:fusion-connected-textures:w0vXLzFW")
+    modRuntimeOnly("maven.modrinth:armor-of-the-ages:Bc9cFnLg")
+    modRuntimeOnly("maven.modrinth:dawn-of-time:ULcoAnDs")
+    modRuntimeOnly("maven.modrinth:garden-trails:Rz53TZEd")
+
+    // Biome mods used to test the biome compatibility tags (remapped by modRuntimeOnly, unlike run/mods jars)
+    // Oh The Biomes We've Gone is excluded on purpose: its dependency Oh The Trees You'll Grow ships mixins without a refmap and crashes the dev environment
+    modRuntimeOnly("maven.modrinth:terralith:WeYhEb5d")
+    modRuntimeOnly("maven.modrinth:biomes-o-plenty:jxUqRzSD")
+    modRuntimeOnly("maven.modrinth:regions-unexplored:XTrgsfIB")
+    modRuntimeOnly("maven.modrinth:natures-spirit:ri5j4RHM")
+    modRuntimeOnly("maven.modrinth:atmospheric:B9fN8ZSq")
+    modRuntimeOnly("maven.modrinth:terrablender:IfcgopfA")
+    modRuntimeOnly("maven.modrinth:glitchcore:pYPZ5MNI")
+    modRuntimeOnly("maven.modrinth:geckolib:aC5KMoNg")
+    modRuntimeOnly("maven.modrinth:blueprint:ZQKDh6gd")
 }
 
 publishMods {
