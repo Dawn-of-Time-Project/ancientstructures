@@ -13,10 +13,6 @@ neoForge {
     if (at.exists()) {
         accessTransformers.from(at.absolutePath)
     }
-    parchment {
-        minecraftVersion = parchment_minecraft
-        mappingsVersion = parchment_version
-    }
     runs {
         configureEach {
             ideName = "NeoForge ${it.name.capitalize()} (${project.path})"
@@ -63,20 +59,20 @@ repositories {
 
 dependencies {
     compileOnly project(":common")
-    runtimeOnly("maven.modrinth:architectury-api:EvL9NK2R")
-    runtimeOnly("maven.modrinth:yacl:HZs9mrWM")
-    runtimeOnly("maven.modrinth:fusion-connected-textures:JB0yd7Es")
-    runtimeOnly("maven.modrinth:armor-of-the-ages:qfrUfbaf")
-    runtimeOnly("maven.modrinth:dawn-of-time:GcqX19lS")
-    runtimeOnly("maven.modrinth:garden-trails:UnPJ9MAf")
+    runtimeOnly("maven.modrinth:architectury-api:fyNzvIcr")
+    runtimeOnly("maven.modrinth:yacl:B1mfgQmD")
+    runtimeOnly("maven.modrinth:fusion-connected-textures:8g0jpGRQ")
+    runtimeOnly("maven.modrinth:armor-of-the-ages:Xqexlxy8")
+    runtimeOnly("maven.modrinth:dawn-of-time:JfJLT3xW")
+    runtimeOnly("maven.modrinth:garden-trails:IRCjaI3g")
 
     // Biome mods used to test the biome compatibility tags
-    runtimeOnly("maven.modrinth:terralith:qcBNpb1U")
-    runtimeOnly("maven.modrinth:lithostitched:GXKf1eIb")
-    runtimeOnly("maven.modrinth:biomes-o-plenty:cCnnnC72")
-    runtimeOnly("maven.modrinth:terrablender:xjrV1Uvq")
-    runtimeOnly("maven.modrinth:glitchcore:6dbbrOrO")
-    runtimeOnly("maven.modrinth:geckolib:FpONDAt3")
+    runtimeOnly("maven.modrinth:terralith:4xxRkKvw")
+    runtimeOnly("maven.modrinth:lithostitched:pLlJIqyp")
+    runtimeOnly("maven.modrinth:biomes-o-plenty:mqkuMsI9")
+    runtimeOnly("maven.modrinth:terrablender:cWLGFrxw")
+    runtimeOnly("maven.modrinth:glitchcore:mYUbCfgT")
+    runtimeOnly("maven.modrinth:geckolib:xfVfPcoC")
 }
 
 publishMods {
