@@ -22,8 +22,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:wither_skeleton",
-          "nbt": "{Tags:[\"praetorian\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither_skeleton",
+            "minecraft:nbt": "{Tags:[\"praetorian\"]}"
+          }
         }
       }
     }

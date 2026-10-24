@@ -4,16 +4,14 @@
     {
       "rolls": 6.0,
       "bonus_rolls": 2.0,
-      "functions": [
-        {
-          "function": "set_count",
-          "count": {
-            "type": "uniform",
-            "min": 1,
-            "max": 3
-          }
+      "modifier": {
+        "type": "set_count",
+        "count": {
+          "type": "uniform",
+          "min": 1,
+          "max": 3
         }
-      ],
+      },
       "entries": [
         {
           "type": "item",
@@ -84,18 +82,16 @@
         {
           "type": "item",
           "name": "leather_helmet",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 1
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 1
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.8,
@@ -107,18 +103,16 @@
         {
           "type": "item",
           "name": "leather_chestplate",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 1
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 1
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.8,
@@ -130,18 +124,16 @@
         {
           "type": "item",
           "name": "leather_leggings",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 1
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 1
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.8,
@@ -153,18 +145,16 @@
         {
           "type": "item",
           "name": "leather_boots",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 1
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 1
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.8,
@@ -176,18 +166,16 @@
         {
           "type": "item",
           "name": "iron_helmet",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.5,
@@ -199,18 +187,16 @@
         {
           "type": "item",
           "name": "iron_chestplate",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.5,
@@ -222,18 +208,16 @@
         {
           "type": "item",
           "name": "iron_leggings",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.5,
@@ -245,18 +229,16 @@
         {
           "type": "item",
           "name": "iron_boots",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.5,
@@ -268,18 +250,16 @@
         {
           "type": "item",
           "name": "diamond_helmet",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.25
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.25
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,
@@ -291,18 +271,16 @@
         {
           "type": "item",
           "name": "diamond_chestplate",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.25
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.25
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,
@@ -314,18 +292,16 @@
         {
           "type": "item",
           "name": "diamond_leggings",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.25
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.25
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,
@@ -337,18 +313,16 @@
         {
           "type": "item",
           "name": "diamond_boots",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.25
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.25
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,

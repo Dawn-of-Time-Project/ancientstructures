@@ -4,16 +4,14 @@
     {
       "rolls": 6.0,
       "bonus_rolls": 2.0,
-      "functions": [
-        {
-          "function": "set_count",
-          "count": {
-            "type": "uniform",
-            "min": 1,
-            "max": 2
-          }
+      "modifier": {
+        "type": "set_count",
+        "count": {
+          "type": "uniform",
+          "min": 1,
+          "max": 2
         }
-      ],
+      },
       "entries": [
         {
           "type": "item",
@@ -53,18 +51,16 @@
         {
           "type": "item",
           "name": "bow",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.6,
@@ -82,18 +78,16 @@
         {
           "type": "item",
           "name": "armoroftheages:quetzalcoatl_armor_head",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,
@@ -105,18 +99,16 @@
         {
           "type": "item",
           "name": "armoroftheages:quetzalcoatl_armor_chest",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,
@@ -128,18 +120,16 @@
         {
           "type": "item",
           "name": "armoroftheages:quetzalcoatl_armor_legs",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,
@@ -151,18 +141,16 @@
         {
           "type": "item",
           "name": "armoroftheages:quetzalcoatl_armor_feet",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
+              "type": "minecraft:enchant_randomly",
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.5
+              }
             },
             {
-              "function": "set_damage",
+              "type": "set_damage",
               "damage": {
                 "type": "uniform",
                 "min": 0.1,

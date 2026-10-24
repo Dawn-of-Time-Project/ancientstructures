@@ -23,10 +23,16 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:wither_skeleton",
-          "equipment": {
-            "head": {
-              "items": ["armoroftheages:raijin_armor_head"]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither_skeleton",
+            "minecraft:equipment": {
+              "head": {
+                "items": [
+                  "armoroftheages:raijin_armor_head"
+                ]
+              }
             }
           }
         }

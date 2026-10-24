@@ -2,11 +2,11 @@ package org.dawnoftime.ancientstructures.advancement;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.advancements.criterion.ContextAwarePredicate;
-import net.minecraft.advancements.criterion.EntityPredicate;
-import net.minecraft.advancements.criterion.SimpleCriterionTrigger;
+import net.minecraft.advancements.triggers.SimpleCriterionTrigger;
+import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 
 import java.util.Optional;
 
@@ -45,11 +45,11 @@ public class StructureDiscoveryTrigger extends SimpleCriterionTrigger<StructureD
         this.trigger(player, instance -> instance.matches(structureId));
     }
 
-    public record TriggerInstance(Optional<ContextAwarePredicate> player, Identifier structure)
+    public record TriggerInstance(Optional<Holder<LootItemCondition>> player, Identifier structure)
             implements SimpleCriterionTrigger.SimpleInstance {
 
         public static final Codec<TriggerInstance> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                EntityPredicate.ADVANCEMENT_CODEC.optionalFieldOf("player").forGetter(TriggerInstance::player),
+                LootItemCondition.CODEC.optionalFieldOf("player").forGetter(TriggerInstance::player),
                 Identifier.CODEC.fieldOf("structure").forGetter(TriggerInstance::structure)
         ).apply(instance, TriggerInstance::new));
 

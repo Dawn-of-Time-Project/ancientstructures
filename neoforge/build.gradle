@@ -59,20 +59,20 @@ repositories {
 
 dependencies {
     compileOnly project(":common")
-    runtimeOnly("maven.modrinth:architectury-api:fyNzvIcr")
-    runtimeOnly("maven.modrinth:yacl:B1mfgQmD")
-    runtimeOnly("maven.modrinth:fusion-connected-textures:8g0jpGRQ")
-    runtimeOnly("maven.modrinth:armor-of-the-ages:Xqexlxy8")
-    runtimeOnly("maven.modrinth:dawn-of-time:JfJLT3xW")
-    runtimeOnly("maven.modrinth:garden-trails:IRCjaI3g")
+    runtimeOnly("maven.modrinth:architectury-api:dZ7iNvS4")
+    runtimeOnly("maven.modrinth:yacl:GL24RgOP")
+    runtimeOnly("maven.modrinth:fusion-connected-textures:zPVqWQrW")
+    runtimeOnly("maven.modrinth:armor-of-the-ages:szxHk9Wu")
+    runtimeOnly("maven.modrinth:dawn-of-time:Kof3PABy")
+    runtimeOnly("maven.modrinth:garden-trails:I3NLfe33")
 
     // Biome mods used to test the biome compatibility tags
-    runtimeOnly("maven.modrinth:terralith:4xxRkKvw")
-    runtimeOnly("maven.modrinth:lithostitched:pLlJIqyp")
-    runtimeOnly("maven.modrinth:biomes-o-plenty:mqkuMsI9")
-    runtimeOnly("maven.modrinth:terrablender:cWLGFrxw")
-    runtimeOnly("maven.modrinth:glitchcore:mYUbCfgT")
-    runtimeOnly("maven.modrinth:geckolib:xfVfPcoC")
+    runtimeOnly("maven.modrinth:terralith:GpiePbRq")
+    runtimeOnly("maven.modrinth:lithostitched:sQznZoKs")
+    runtimeOnly("maven.modrinth:biomes-o-plenty:TA74H5xC")
+    runtimeOnly("maven.modrinth:terrablender:Vmc9zVfq")
+    runtimeOnly("maven.modrinth:glitchcore:pQgy3bfh")
+    runtimeOnly("maven.modrinth:geckolib:2s1O42FX")
 }
 
 publishMods {

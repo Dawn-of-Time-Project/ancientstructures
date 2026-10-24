@@ -21,8 +21,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:skeleton",
-          "nbt": "{Tags:[\"corrupted_farmer\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:skeleton",
+            "minecraft:nbt": "{Tags:[\"corrupted_farmer\"]}"
+          }
         }
       }
     },
@@ -30,8 +34,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:zombie",
-          "nbt": "{Tags:[\"fallen_samurai\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:zombie",
+            "minecraft:nbt": "{Tags:[\"fallen_samurai\"]}"
+          }
         }
       }
     },
@@ -39,8 +47,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:wither_skeleton",
-          "nbt": "{Tags:[\"temple_boss\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither_skeleton",
+            "minecraft:nbt": "{Tags:[\"temple_boss\"]}"
+          }
         }
       }
     },
@@ -48,8 +60,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:skeleton",
-          "nbt": "{Tags:[\"centurion\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:skeleton",
+            "minecraft:nbt": "{Tags:[\"centurion\"]}"
+          }
         }
       }
     },
@@ -57,8 +73,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:zombie",
-          "nbt": "{Tags:[\"tribesmen\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:zombie",
+            "minecraft:nbt": "{Tags:[\"tribesmen\"]}"
+          }
         }
       }
     },
@@ -66,8 +86,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:wither_skeleton",
-          "nbt": "{Tags:[\"wither_boss\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither_skeleton",
+            "minecraft:nbt": "{Tags:[\"wither_boss\"]}"
+          }
         }
       }
     },
@@ -75,8 +99,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:zombie",
-          "nbt": "{Tags:[\"cursed_knight\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:zombie",
+            "minecraft:nbt": "{Tags:[\"cursed_knight\"]}"
+          }
         }
       }
     },
@@ -84,8 +112,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:wither_skeleton",
-          "nbt": "{Tags:[\"praetorian\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither_skeleton",
+            "minecraft:nbt": "{Tags:[\"praetorian\"]}"
+          }
         }
       }
     },
@@ -93,22 +125,44 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:wither_skeleton",
-          "nbt": "{Tags:[\"false_archmage\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wither_skeleton",
+            "minecraft:nbt": "{Tags:[\"false_archmage\"]}"
+          }
         }
       }
     }
   },
   "requirements": [
-    ["kill_corrupted_farmer"],
-    ["kill_fallen_samurai"],
-    ["kill_temple_boss"],
-    ["kill_centurion"],
-    ["kill_tribesmen"],
-    ["kill_wither_boss"],
-    ["kill_cursed_knight"],
-    ["kill_praetorian"],
-    ["kill_false_archmage"]
+    [
+      "kill_corrupted_farmer"
+    ],
+    [
+      "kill_fallen_samurai"
+    ],
+    [
+      "kill_temple_boss"
+    ],
+    [
+      "kill_centurion"
+    ],
+    [
+      "kill_tribesmen"
+    ],
+    [
+      "kill_wither_boss"
+    ],
+    [
+      "kill_cursed_knight"
+    ],
+    [
+      "kill_praetorian"
+    ],
+    [
+      "kill_false_archmage"
+    ]
   ],
   "rewards": {
     "experience": 500

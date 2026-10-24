@@ -31,9 +31,9 @@ dependencies {
     implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation "dev.isxander:yet-another-config-lib:${project.yacl_version}-fabric"
-    implementation "maven.modrinth:armor-of-the-ages:QEBj9oGC"
-    implementation "maven.modrinth:dawn-of-time:USQ0tmbZ"
-    runtimeOnly "maven.modrinth:garden-trails:D79RLFof"
+    implementation "maven.modrinth:armor-of-the-ages:5sPEZaZo"
+    implementation "maven.modrinth:dawn-of-time:GAfvth9d"
+    runtimeOnly "maven.modrinth:garden-trails:Ju64lxfa"
     implementation project(":common")
 }
 
