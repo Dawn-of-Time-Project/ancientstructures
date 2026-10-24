@@ -1,4 +1,4 @@
-## 🏛️ Ancient Structures 1.21.1 v0.1.0
+## 🏛️ Ancient Structures 1.21.1 v0.1.2
 
 ![](https://i.imgur.com/Jyeov7Z.png)
 
