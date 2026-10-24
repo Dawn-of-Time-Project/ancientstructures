@@ -29,8 +29,8 @@ public class CommonStructureChecker {
     private CommonStructureChecker() {}
 
     public static void checkAndTrigger(ServerPlayer player) {
-        ServerLevel level = player.serverLevel();
-        Registry<Structure> registry = level.registryAccess().registryOrThrow(Registries.STRUCTURE);
+        ServerLevel level = player.level();
+        Registry<Structure> registry = level.registryAccess().lookupOrThrow(Registries.STRUCTURE);
         StructureManager structureManager = level.structureManager();
 
         // Returns all structures whose bounding box intersects the player's current chunk.
@@ -42,9 +42,9 @@ public class CommonStructureChecker {
 
             ResourceKey<Structure> key = keyOpt.get();
             // Only fire for this mod's structures.
-            if (!key.location().getNamespace().equals(Constants.MOD_ID)) continue;
+            if (!key.identifier().getNamespace().equals(Constants.MOD_ID)) continue;
 
-            StructureDiscoveryTrigger.INSTANCE.trigger(player, key.location());
+            StructureDiscoveryTrigger.INSTANCE.trigger(player, key.identifier());
         }
     }
 }

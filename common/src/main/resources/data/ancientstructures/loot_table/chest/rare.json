@@ -186,7 +186,7 @@
                 "function": "set_enchantments",
                 "enchantments": {
                     "vanishing_curse": 1,
-                    "sweeping": 3,
+                    "sweeping_edge": 3,
                     "knockback": 5
                 },
                 "add": true

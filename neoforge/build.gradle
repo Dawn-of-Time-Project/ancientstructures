@@ -24,8 +24,12 @@ neoForge {
         client {
             client()
         }
-        data {
-            data()
+        clientData {
+            clientData()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+        serverData {
+            serverData()
             programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         server {
@@ -59,23 +63,20 @@ repositories {
 
 dependencies {
     compileOnly project(":common")
-    runtimeOnly("maven.modrinth:architectury-api:1IiqEQGl")
-    runtimeOnly("maven.modrinth:yacl:7TVdVtxF")
-    runtimeOnly("maven.modrinth:fusion-connected-textures:AYDaLPK8")
-    runtimeOnly("maven.modrinth:armor-of-the-ages:EvVBQ12Y")
-    runtimeOnly("maven.modrinth:dawn-of-time:vuLdhPUq")
-    runtimeOnly("maven.modrinth:garden-trails:z6aW3Swm")
+    runtimeOnly("maven.modrinth:architectury-api:EvL9NK2R")
+    runtimeOnly("maven.modrinth:yacl:HZs9mrWM")
+    runtimeOnly("maven.modrinth:fusion-connected-textures:JB0yd7Es")
+    runtimeOnly("maven.modrinth:armor-of-the-ages:qfrUfbaf")
+    runtimeOnly("maven.modrinth:dawn-of-time:GcqX19lS")
+    runtimeOnly("maven.modrinth:garden-trails:UnPJ9MAf")
 
     // Biome mods used to test the biome compatibility tags
-    runtimeOnly("maven.modrinth:terralith:IY93YaEe")
-    runtimeOnly("maven.modrinth:biomes-o-plenty:BtZKRp69")
-    runtimeOnly("maven.modrinth:regions-unexplored:M9SMxdTX")
-    runtimeOnly("maven.modrinth:natures-spirit:2gTLYP0m")
-    runtimeOnly("maven.modrinth:atmospheric:XIvPRE4O")
-    runtimeOnly("maven.modrinth:terrablender:6e8GCrLb")
-    runtimeOnly("maven.modrinth:glitchcore:S2TfWrZR")
-    runtimeOnly("maven.modrinth:geckolib:Grwn5rUB")
-    runtimeOnly("maven.modrinth:blueprint:FHOjk8Ez")
+    runtimeOnly("maven.modrinth:terralith:qcBNpb1U")
+    runtimeOnly("maven.modrinth:lithostitched:GXKf1eIb")
+    runtimeOnly("maven.modrinth:biomes-o-plenty:cCnnnC72")
+    runtimeOnly("maven.modrinth:terrablender:xjrV1Uvq")
+    runtimeOnly("maven.modrinth:glitchcore:6dbbrOrO")
+    runtimeOnly("maven.modrinth:geckolib:FpONDAt3")
 }
 
 publishMods {

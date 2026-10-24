@@ -34,19 +34,16 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    modImplementation "dev.isxander:yet-another-config-lib:3.6.6+1.21.1-fabric"
-    modImplementation "maven.modrinth:armor-of-the-ages:diY1l81b"
-    modImplementation "maven.modrinth:dawn-of-time:OX2UPX7m"
-    modRuntimeOnly "maven.modrinth:garden-trails:1TsfRupj"
+    modImplementation "dev.isxander:yet-another-config-lib:3.8.2+1.21.11-fabric"
+    modImplementation "maven.modrinth:armor-of-the-ages:qDK1wh1o"
+    modImplementation "maven.modrinth:dawn-of-time:i4SRnCbF"
+    modRuntimeOnly "maven.modrinth:garden-trails:IYHhYTmB"
     implementation project(":common")
 }
 
 loom {
     if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
         accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.accesswidener"))
-    }
-    mixin {
-        defaultRefmapName.set("${mod_id}.refmap.json")
     }
     runs {
         client {

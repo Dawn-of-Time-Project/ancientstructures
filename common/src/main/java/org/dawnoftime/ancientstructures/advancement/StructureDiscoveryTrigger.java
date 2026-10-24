@@ -2,10 +2,10 @@ package org.dawnoftime.ancientstructures.advancement;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.advancements.critereon.ContextAwarePredicate;
-import net.minecraft.advancements.critereon.EntityPredicate;
-import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.advancements.criterion.ContextAwarePredicate;
+import net.minecraft.advancements.criterion.EntityPredicate;
+import net.minecraft.advancements.criterion.SimpleCriterionTrigger;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Optional;
@@ -28,7 +28,7 @@ import java.util.Optional;
 public class StructureDiscoveryTrigger extends SimpleCriterionTrigger<StructureDiscoveryTrigger.TriggerInstance> {
 
     public static final StructureDiscoveryTrigger INSTANCE = new StructureDiscoveryTrigger();
-    public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath("ancientstructures", "structure_discovery");
+    public static final Identifier ID = Identifier.fromNamespaceAndPath("ancientstructures", "structure_discovery");
 
     @Override
     public Codec<TriggerInstance> codec() {
@@ -41,19 +41,19 @@ public class StructureDiscoveryTrigger extends SimpleCriterionTrigger<StructureD
      * @param player      the server-side player
      * @param structureId the namespaced ID of the structure (e.g. "ancientstructures:german_farm")
      */
-    public void trigger(ServerPlayer player, ResourceLocation structureId) {
+    public void trigger(ServerPlayer player, Identifier structureId) {
         this.trigger(player, instance -> instance.matches(structureId));
     }
 
-    public record TriggerInstance(Optional<ContextAwarePredicate> player, ResourceLocation structure)
+    public record TriggerInstance(Optional<ContextAwarePredicate> player, Identifier structure)
             implements SimpleCriterionTrigger.SimpleInstance {
 
         public static final Codec<TriggerInstance> CODEC = RecordCodecBuilder.create(instance -> instance.group(
                 EntityPredicate.ADVANCEMENT_CODEC.optionalFieldOf("player").forGetter(TriggerInstance::player),
-                ResourceLocation.CODEC.fieldOf("structure").forGetter(TriggerInstance::structure)
+                Identifier.CODEC.fieldOf("structure").forGetter(TriggerInstance::structure)
         ).apply(instance, TriggerInstance::new));
 
-        public boolean matches(ResourceLocation structureId) {
+        public boolean matches(Identifier structureId) {
             return this.structure.equals(structureId);
         }
     }
