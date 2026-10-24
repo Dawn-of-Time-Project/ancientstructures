@@ -67,17 +67,17 @@ Every culture has its own chests, with a common table and a rare table.
 
 ## Compatibility
 
-| Mod | Status | Notes |
-|---|---|---|
-| [Dawn of Time](https://modrinth.com/mod/dawn-of-time) | Required | Blocks and decorations used by the structures |
-| [Armor of the Ages](https://modrinth.com/mod/armor-of-the-ages) | Required | Armor worn by the guardians and found in chests |
-| [Fusion](https://modrinth.com/mod/fusion-connected-textures) | Required | Connected textures |
-| [YACL](https://modrinth.com/mod/yacl) | Required | Config screen of Dawn of Time |
-| [Biomes O' Plenty](https://modrinth.com/mod/biomes-o-plenty) | Compatible | Extra biomes for every culture |
-| [Terralith](https://modrinth.com/mod/terralith) | Compatible | Extra biomes for every culture |
-| [Oh The Biomes We've Gone](https://modrinth.com/mod/oh-the-biomes-weve-gone) | Compatible | Extra biomes for every culture |
-| [Regions Unexplored](https://modrinth.com/mod/regions-unexplored) | Compatible | Extra biomes for every culture |
-| [Nature's Spirit](https://modrinth.com/mod/natures-spirit) | Compatible | Extra biomes for every culture |
+| Mod | Status | Notes                                            |
+|---|---|--------------------------------------------------|
+| [Dawn of Time](https://modrinth.com/mod/dawn-of-time) | Required | Blocks and decorations used by the structures    |
+| [Armor of the Ages](https://modrinth.com/mod/armor-of-the-ages) | Required | Armor worn by the guardians and found in chests  |
+| [Fusion](https://modrinth.com/mod/fusion-connected-textures) | Required | Connected textures                               |
+| [YACL](https://modrinth.com/mod/yacl) | Required | Config screen of Armor of the Ages               |
+| [Biomes O' Plenty](https://modrinth.com/mod/biomes-o-plenty) | Compatible | Extra biomes for every culture                   |
+| [Terralith](https://modrinth.com/mod/terralith) | Compatible | Extra biomes for every culture                   |
+| [Oh The Biomes We've Gone](https://modrinth.com/mod/oh-the-biomes-weve-gone) | Compatible | Extra biomes for every culture                   |
+| [Regions Unexplored](https://modrinth.com/mod/regions-unexplored) | Compatible | Extra biomes for every culture                   |
+| [Nature's Spirit](https://modrinth.com/mod/natures-spirit) | Compatible | Extra biomes for every culture                   |
 | [Atmospheric](https://modrinth.com/mod/atmospheric) | Compatible | Extra jungle biomes for Pre-Columbian structures |
 
 <div align="center"><img src="https://i.imgur.com/yhha6Zo.png"></div>
