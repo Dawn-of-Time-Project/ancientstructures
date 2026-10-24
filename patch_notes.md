@@ -1,7 +1,8 @@
-## 🏛️ Ancient Structures 1.20.1 v0.0.15
+## 🏛️ Ancient Structures 1.21.1 v0.1.0
 
 ![](https://i.imgur.com/Jyeov7Z.png)
 
+- Ported the mod to Minecraft 1.21.1 (NeoForge and Fabric)
 - Fixed the issue with the Japanese Temple, Lone Priest and Windmill structures not spawning
 - Several biome mods compatibility added (Terralith, Biomes O' Plenty, Regions Unexplored, Nature's Spirit, Atmospheric)
 

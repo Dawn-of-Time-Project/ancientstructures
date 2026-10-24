@@ -1,0 +1,1 @@
+summon minecraft:zombie ~ ~ ~ {PersistenceRequired:1b,Tags:["fallen_samurai"],HandItems:[{id:"minecraft:iron_sword",count:1},{}],ArmorItems:[{},{id:"armoroftheages:o_yoroi_armor_legs",count:1},{id:"armoroftheages:o_yoroi_armor_chest",count:1},{id:"armoroftheages:o_yoroi_armor_head",count:1}]}

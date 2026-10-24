@@ -1,0 +1,84 @@
+plugins {
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev'
+    id 'me.modmuss50.mod-publish-plugin'
+}
+
+neoForge {
+    version = neoforge_version
+
+    validateAccessTransformers = true
+
+    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers.from(at.absolutePath)
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+    runs {
+        configureEach {
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})"
+        }
+        client {
+            client()
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+        server {
+            server()
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+            sourceSet project(':common').sourceSets.main
+        }
+    }
+}
+
+sourceSets.main.resources.srcDir 'src/generated/resources'
+
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
+dependencies {
+    compileOnly project(":common")
+    runtimeOnly("maven.modrinth:architectury-api:1IiqEQGl")
+    runtimeOnly("maven.modrinth:yacl:7TVdVtxF")
+    runtimeOnly("maven.modrinth:fusion-connected-textures:AYDaLPK8")
+    runtimeOnly("maven.modrinth:armor-of-the-ages:EvVBQ12Y")
+    runtimeOnly("maven.modrinth:dawn-of-time:vuLdhPUq")
+    runtimeOnly("maven.modrinth:garden-trails:z6aW3Swm")
+
+    // Biome mods used to test the biome compatibility tags
+    runtimeOnly("maven.modrinth:terralith:IY93YaEe")
+    runtimeOnly("maven.modrinth:biomes-o-plenty:BtZKRp69")
+    runtimeOnly("maven.modrinth:regions-unexplored:M9SMxdTX")
+    runtimeOnly("maven.modrinth:natures-spirit:2gTLYP0m")
+    runtimeOnly("maven.modrinth:atmospheric:XIvPRE4O")
+    runtimeOnly("maven.modrinth:terrablender:6e8GCrLb")
+    runtimeOnly("maven.modrinth:glitchcore:S2TfWrZR")
+    runtimeOnly("maven.modrinth:geckolib:Grwn5rUB")
+    runtimeOnly("maven.modrinth:blueprint:FHOjk8Ez")
+}
+
+publishMods {
+    file = jar.archiveFile
+    modLoaders.add("neoforge")
+}

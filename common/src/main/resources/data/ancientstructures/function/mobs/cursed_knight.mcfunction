@@ -1,0 +1,1 @@
+summon minecraft:zombie ~ ~ ~ {PersistenceRequired:1b,Tags:["cursed_knight"],HandItems:[{id:"minecraft:iron_sword",count:1},{id:"minecraft:shield",count:1}],ArmorItems:[{id:"armoroftheages:iron_plate_armor_feet",count:1},{id:"armoroftheages:iron_plate_armor_legs",count:1},{id:"armoroftheages:iron_plate_armor_chest",count:1},{id:"armoroftheages:iron_plate_armor_head",count:1}]}

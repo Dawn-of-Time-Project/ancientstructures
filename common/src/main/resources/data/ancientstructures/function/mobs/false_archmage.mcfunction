@@ -1,0 +1,1 @@
+summon minecraft:wither_skeleton ~ ~ ~ {PersistenceRequired:1b,Tags:["false_archmage"],HandItems:[{id:"minecraft:iron_sword",count:1},{id:"minecraft:shield",count:1}],ArmorItems:[{id:"armoroftheages:holy_armor_feet",count:1},{id:"armoroftheages:holy_armor_legs",count:1},{id:"armoroftheages:holy_armor_chest",count:1},{id:"armoroftheages:holy_armor_head",count:1}]}

@@ -2,7 +2,8 @@ package org.dawnoftime.ancientstructures;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import org.dawnoftime.ancientstructures.advancement.CommonStructureChecker;
 import org.dawnoftime.ancientstructures.advancement.StructureDiscoveryTrigger;
 
@@ -12,7 +13,7 @@ public class AncientStructures implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        CriteriaTriggers.register(StructureDiscoveryTrigger.INSTANCE);
+        Registry.register(BuiltInRegistries.TRIGGER_TYPES, StructureDiscoveryTrigger.ID, StructureDiscoveryTrigger.INSTANCE);
 
         // Check all online players once per second for structure presence.
         ServerTickEvents.END_SERVER_TICK.register(server -> {

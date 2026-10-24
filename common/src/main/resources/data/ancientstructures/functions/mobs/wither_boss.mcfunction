@@ -1,1 +1,0 @@
-summon minecraft:wither_skeleton ~ ~ ~ {PersistenceRequired:1b,Tags:["wither_boss"],HandItems:[{id:"minecraft:iron_sword",Count:1b},{}],ArmorItems:[{},{},{id:"armoroftheages:quetzalcoatl_armor_chest",Count:1b},{id:"armoroftheages:quetzalcoatl_armor_head",Count:1b}]}

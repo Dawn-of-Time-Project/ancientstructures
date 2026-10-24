@@ -1,19 +1,19 @@
 package org.dawnoftime.ancientstructures.advancement;
 
-import com.google.gson.JsonObject;
-import net.minecraft.advancements.critereon.AbstractCriterionTriggerInstance;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.critereon.ContextAwarePredicate;
-import net.minecraft.advancements.critereon.DeserializationContext;
-import net.minecraft.advancements.critereon.SerializationContext;
+import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.advancements.critereon.SimpleCriterionTrigger;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.util.GsonHelper;
+
+import java.util.Optional;
 
 /**
  * Custom criterion trigger that fires when a player physically enters
  * one of the mod's structures. This bypasses the broken LocationPredicate
- * holder resolution in Forge 1.20.1 for dynamic-registry structures.
+ * holder resolution in NeoForge for dynamic-registry structures.
  *
  * <p>Advancement JSON usage:
  * <pre>{@code
@@ -28,17 +28,11 @@ import net.minecraft.util.GsonHelper;
 public class StructureDiscoveryTrigger extends SimpleCriterionTrigger<StructureDiscoveryTrigger.TriggerInstance> {
 
     public static final StructureDiscoveryTrigger INSTANCE = new StructureDiscoveryTrigger();
-    public static final ResourceLocation ID = new ResourceLocation("ancientstructures", "structure_discovery");
+    public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath("ancientstructures", "structure_discovery");
 
     @Override
-    public ResourceLocation getId() {
-        return ID;
-    }
-
-    @Override
-    protected TriggerInstance createInstance(JsonObject json, ContextAwarePredicate predicate, DeserializationContext context) {
-        ResourceLocation structure = new ResourceLocation(GsonHelper.getAsString(json, "structure"));
-        return new TriggerInstance(predicate, structure);
+    public Codec<TriggerInstance> codec() {
+        return TriggerInstance.CODEC;
     }
 
     /**
@@ -51,24 +45,16 @@ public class StructureDiscoveryTrigger extends SimpleCriterionTrigger<StructureD
         this.trigger(player, instance -> instance.matches(structureId));
     }
 
-    public static class TriggerInstance extends AbstractCriterionTriggerInstance {
+    public record TriggerInstance(Optional<ContextAwarePredicate> player, ResourceLocation structure)
+            implements SimpleCriterionTrigger.SimpleInstance {
 
-        private final ResourceLocation structure;
-
-        public TriggerInstance(ContextAwarePredicate predicate, ResourceLocation structure) {
-            super(ID, predicate);
-            this.structure = structure;
-        }
+        public static final Codec<TriggerInstance> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+                EntityPredicate.ADVANCEMENT_CODEC.optionalFieldOf("player").forGetter(TriggerInstance::player),
+                ResourceLocation.CODEC.fieldOf("structure").forGetter(TriggerInstance::structure)
+        ).apply(instance, TriggerInstance::new));
 
         public boolean matches(ResourceLocation structureId) {
             return this.structure.equals(structureId);
-        }
-
-        @Override
-        public JsonObject serializeToJson(SerializationContext context) {
-            JsonObject json = super.serializeToJson(context);
-            json.addProperty("structure", this.structure.toString());
-            return json;
         }
     }
 }
