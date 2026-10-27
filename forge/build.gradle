@@ -1,7 +1,6 @@
 plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev.legacyforge'
-    id 'me.modmuss50.mod-publish-plugin'
 }
 
 legacyForge {
@@ -69,7 +68,14 @@ dependencies {
     modRuntimeOnly("maven.modrinth:blueprint:ZQKDh6gd")
 }
 
+jar {
+    finalizedBy('reobfJar')
+}
+
 publishMods {
-    file = jar.archiveFile
+    // Point to the reobfuscated JAR produced by a local build.
+    // Run "build" (forge > tasks > build > build) BEFORE running publishMods.
+    // publishMods will NOT trigger a rebuild, it only uploads the pre-built file.
+    file = layout.buildDirectory.file("libs/${mod_id}-forge-${minecraft_version}-${project.version}.jar")
     modLoaders.add("forge")
 }
